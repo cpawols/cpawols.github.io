@@ -1,3 +1,4 @@
+
   <!doctype html>
 <html lang="en">
 <html lang="pl">
@@ -39,7 +40,8 @@
 			<div class="slides">
 				<section>
 					<h1>Czy cuda się zdarzają?</h1>
-					<h5>Czyli attribute selection  dzięki klasyfikatorom regułowym</h5>
+					<h5>Czyli attribute selection <br>
+						dzięki klasyfikatorom regułowym</h5>
 					<p>
 						<small>Paweł Olszewski</small>
 					</p>
@@ -70,18 +72,20 @@
 					
 						    \[Score(a_i) = \sum_{k = 1}^{s} \sum_{j=1}^{l} \mathbb{I}(a_i \in Rule_{k,j}) \]
 					</p>
-					
-					<br><br>
+					<br>
 					<p>
 					    <ul style="list-style: none">
 						<li> \(Rule_{k,j}\) -  \(j\)-ta reguła w \(k\)-tej podtablece  </li>
 						<li> \(s\) - liczba podzbiorów obiektów </li>
+						<li> \(a_i\) - \(i\)-ty atrybut
 					    </ul>
 					</p>
 				</section>
 				
 				<section>
-				  <h1>Pierwszy eksperyment na danych mikromacierzowych</h1>
+				  <h1>Pierwszy eksperyment <br>
+						na danych <br>
+						mikromacierzowych</h1>
 				</section>
 				
 				<section>
@@ -89,15 +93,16 @@
 				</section>
 				
 				<section>
-				  <h3> Znowu RSESlib...  </h3>
+				  <font size="5"> Znowu RSESlib...  </font>
 				</section>
 				
 				
 				
-				  
+				
 				  <section id="fragments">
 						
-						<p>  Jak wyglądają wygenrowane reguły przez algorytm<br> z RSESliba? </p>
+						<p>  Jak wyglądają wygenrowane reguły <br>
+							przez algorytm z RSESliba? </p>
 						<small><p class="fragment">   ( attribute_0 in (-Infinity;83.75) ) & ( attribute_4 in (53.0;Infinity) ) -> ( DEC = 5 )</p></small>
 						
 				</section>
@@ -123,12 +128,14 @@ for (Rule it : rules) {
 				
 				<section>
 				  <p> Dwie godziny później...</p>
-				  <p class="fragment">  Wróciłem do danych, które były dostępne na systemach decyzyjnych </p>
+				  <p class="fragment">  Wróciłem do danych, które były dostępne <br>
+										na systemach decyzyjnych </p>
 				 </section> 
 				 
 				 <section>
 				  Ustalamy parametry naszego eksperymentu 
-				  <p class="fragment"> Zmniejszamy parametry w stosunku do danych mikromacierzowych</p>
+				  <p class="fragment"> Zmniejszamy parametry w stosunku <br>
+										do danych mikromacierzowych</p>
 				  <p class="fragment"> 1000 podtablic po 50 obiektów w każdej </p>
 				 </section>
 				 
@@ -140,7 +147,8 @@ for (Rule it : rules) {
 				</section>
 				
 				<section>
-				Przykładowy rozkład atrybutów dla danych z systemów decyzyjynych
+				Przykładowy rozkład atrybutów <br>
+					dla danych z systemów decyzyjynych
 				<br>
 				<small>
 				<table> 
@@ -185,7 +193,8 @@ for (Rule it : rules) {
 				  
 				  <p class=fragment> Eksperymenty związane z selekcją atrybutów z artykułu PODAĆ NAZWĘ </p>
 				  
-				  <p class=fragment> Ręcznie wybieram liczbę znaczących atrybutów i przeprowadzam doświdczenia</p>
+				  <p class=fragment> Ręcznie wybieram liczbę znaczących atrybutów <br>
+										i przeprowadzam doświadczenia</p>
 				
 				</section>
 				
@@ -194,10 +203,10 @@ for (Rule it : rules) {
 				<center>
 				<table >
 				    <tr><td></td><td>Reducts</td><td>Rules</td><td>Rules II</td><td>Rules III</td></tr>
-				    <tr><td>Acc</td><td>83.58%</td><td>84.21%</td><td><span class=highlight-blue><span class="fragment">89.36%</span></span></td><td>90.6%</td></tr>
+				    <tr><td>Acc</td><td>83.58%</td><td>84.21%</td><td><p class=fragment><span class="fragment highlight-blue">89.36%</span></p></td><td>90.6%</td></tr>
 			<!--	    <tr><td>Attr</td><td>[1, 0, 2, 4, 3, 7, 5]</td><td><p class="fragment">[1, 0, 4, 2, 15, 8, 3]</p></td><td> [1, 0, 4, 15, 3, 2]</td></tr> -->
-				    <tr><td>Atrr</td><td>6</td><td>6</td><td><p class=fragment>7</p></td><td>8</td></tr>				
-				    <tr><td>Time</td><td>10.7 sec</td><td>70.2 sec</td><td><p class="fragment"><span class="fragment highlight-red">73.2 sec</span></p></td><td>163.4 sec</td></tr>
+				    <tr><td>Atrr</td><td>6</td><td>6</td><td><p class=fragment><span class="fragment highlight-blue">7</span></p></td><td>8</td></tr>				
+				    <tr><td>Time</td><td>10.7 sec</td><td>70.2 sec</td><td><p class="fragment"><span class="fragment highlight-blue">73.2 sec</span></p></td><td>163.4 sec</td></tr>
 				    <tr><td></td></tr>
 				</table>
 				</center>
@@ -224,7 +233,8 @@ for (Rule it : rules) {
 					</code></center></pre>
 				 </span>
 				 
-				  <small> <p class=fragment> Problem z wielowątkowością. Przy eksperymentach założyłem, że jeżeli wyjątek nie jest rzucany to obliczenia są poprawne</p></small>
+				  <small> <p class=fragment> Problem z wielowątkowością. <br>
+					Przy eksperymentach założyłem, że jeżeli wyjątek nie jest rzucany to obliczenia są poprawne</p></small>
 				 </section>
 				 
 				 
@@ -235,7 +245,8 @@ for (Rule it : rules) {
 				 
 				 <p class=fragment> Brakuje porządnego algorytmu generowania reguł </p>
 				 
-				 <p class=fragment> Pomimo ustawionego ziarna, reguły potrafią się nieznacznie różnić od siebie </p>
+				 <p class=fragment> Pomimo ustawionego ziarna, reguły potrafią <br>
+					nieznacznie różnić się od siebie </p>
 				 </section>
 				 
 				 <section>
@@ -252,7 +263,8 @@ for (Rule it : rules) {
 				 Co dalej?
 				 <p class=fragment>Znaleźć metodę cięcia atrybutów </p>
 				 <p class=fragment>Poszukać jeszcze innego klasyfikatora regułowego</p>
-				 <p class=fragment>Uruchomić obliczenia na Spraku i danych mikromacierzowych</p>
+				 <p class=fragment>Uruchomić obliczenia na Sparku <br>
+									i danych mikromacierzowych</p>
 				</section>
 
 
