@@ -1,0 +1,23 @@
+[( attribute_3 in (-Infinity;81.25) ) & ( attribute_5 in (-Infinity;53.5) ) -> ( DEC = 0 ), ( attribute_11 in (-Infinity;1.25) ) -> ( DEC = 1 ), ( attribute_10 in (-Infinity;4.0) ) -> ( DEC = 2 ), ( attribute_0 in (69.5;Infinity) ) & ( attribute_1 in (92.0;Infinity) ) -> ( DEC = 6 ), ( attribute_7 in (92.5;Infinity) ) -> ( DEC = 7 ), ( attribute_4 in (49.25;Infinity) ) -> ( DEC = 8 ), ( attribute_1 in (-Infinity;62.5) ) -> ( DEC = 9 )]
+{3=1, 2=0, 1=11, 0=15}
+Selected attrs: [1, 0, 11, 15]
+
+
+
+{14311=1, 7574=0, 4329=4, 3782=3, 3651=15, 3646=2, 3597=8, 3358=13, 3158=6, 3115=7, 3099=5, 3048=9, 3046=10, 2260=14, 2168=11, 2064=12}
+Selected attrs: [1, 0, 4, 3, 15, 2, 8]
+Num selected attrs: 7
+Accuracy: 0.8932860262008734
+
+
+Selected attrs: [1, 0, 4, 3, 15, 2, 8]
+Num selected attrs: 7
+Accuracy: 0.8932860262008734
+
+Selected attrs: [1, 0, 4, 9, 8, 2]
+Num selected attrs: 6
+Accuracy: 0.8358351528384279
+
+
+
+
