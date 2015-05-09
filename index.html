@@ -54,15 +54,14 @@
 					</p>
 				</section>
 
-				<section data-background="#dddddd">
-		                        <img src="http://www.markhneedham.com/blog/wp-content/uploads/2015/04/Spark-logo-192x100px.png">
+				<section >
+		                        <center><img src="http://www.markhneedham.com/blog/wp-content/uploads/2015/04/Spark-logo-192x100px.png"></center>
+		                        <span class=fragment><img data-src="img/funnycomputer.jpg"></span>
 		                </section>	
 
-				<section>
-					<img data-src="img/funnycomputer.jpg">
-				</section>
+				
 				<!-- Example of nested vertical slides -->
-				<section data-background="white">  
+				<section >  
 					 <h3>Random Subtables & Rules</h3>
 					<img height="500" data-src="img/subsets.png">
 				</section>
@@ -93,7 +92,7 @@
 				</section>
 				
 				<section>
-				  <font size="5"> Znowu RSESlib...  </font>
+				  <font size="8"> Znowu RSESlib...  </font>
 				</section>
 				
 				
@@ -103,7 +102,7 @@
 						
 						<p>  Jak wyglądają wygenrowane reguły <br>
 							przez algorytm z RSESliba? </p>
-						<small><p class="fragment">   ( attribute_0 in (-Infinity;83.75) ) & ( attribute_4 in (53.0;Infinity) ) -> ( DEC = 5 )</p></small>
+						<font size=5><p class="fragment">   ( attribute_0 in (-Infinity;83.75) ) & ( attribute_4 in (53.0;Infinity) ) -> ( DEC = 5 )</p></small></font>
 						
 				</section>
 				
@@ -128,12 +127,12 @@ for (Rule it : rules) {
 				
 				<section>
 				  <p> Dwie godziny później...</p>
-				  <p class="fragment">  Wróciłem do danych, które były dostępne <br>
+				  <p class="fragment">  Wziąłem dane, które były dostępne <br>
 										na systemach decyzyjnych </p>
 				 </section> 
 				 
 				 <section>
-				  Ustalamy parametry naszego eksperymentu 
+				  Ustaliłem parametry naszego eksperymentu 
 				  <p class="fragment"> Zmniejszamy parametry w stosunku <br>
 										do danych mikromacierzowych</p>
 				  <p class="fragment"> 1000 podtablic po 50 obiektów w każdej </p>
@@ -141,7 +140,7 @@ for (Rule it : rules) {
 				 
 				 
 				<section>
-				<p> Jak tnę atrybuty?</p>
+				<p> Jak wybieram atrybuty?</p>
 				  
 				 <span class=fragment> <img data-src="img/drwal.jpg"> </span>
 				</section>
@@ -173,12 +172,14 @@ for (Rule it : rules) {
 				
 				</section>
 				
+				
 				<section background-data=fffff>
+				  
 				    <img data-src=img/wykres.jpg>
 				</section>
 				
 				<section>
-				Więc może wybierzmy tylko dwa lub trzy atrybuty?
+				 Wybierzmy może tylko dwa lub trzy atrybuty?
 				
 				<span class=fragment><table>
 				<tr><td>Lp</td><td>Acc</td></tr>
@@ -188,29 +189,26 @@ for (Rule it : rules) {
 				</table>
 				</span>
 				
-				<span class=fragment> Zatem zwiększmy liczbę atrybutów </span>
+				<span class=fragment> Co się stanie po zwiększeniu liczby atrybutów ? </span>
 				</section>
 				
 				<section>
-				  W jaki sposób?
+				  Ile teraz atrybutów wybiorę?
 				  
-				  <p class=fragment> Eksperymenty związane z selekcją atrybutów z artykułu PODAĆ NAZWĘ </p>
-				  
-				  <p class=fragment> Ręcznie wybieram liczbę znaczących atrybutów <br>
-										i przeprowadzam doświadczenia</p>
-				
+				  <p class=fragment> Tyle samo co algorytm RandomReducts </p>
 				</section>
 				
 				
 				<section>
 				<center>
 				<table >
-				    <tr><td></td><td>Reducts</td><td>Rules</td><td>Rules II</td><td>Rules III</td></tr>
-				    <tr><td>Acc</td><td>83.58%</td><td>84.21%</td><td><p class=fragment><span class="fragment highlight-blue">89.36%</span></p></td><td>90.6%</td></tr>
+				    <tr><td></td><td>Reducts</td><td>Reducts</td><td>Rules</td><td>Rules II</td><td>Rules III</td></tr>
+				    <tr><td>Acc</td><td>83.58%</td><td>90%</td><td>84.21%</td><td><p>89.36%</p></td><td>90.6%</td></tr>
+				    <tr><td>Atrr</td><td>6</td><td>7</td><td>6</td><td><p >7</p></td><td>8</td></tr>				
 			<!--	    <tr><td>Attr</td><td>[1, 0, 2, 4, 3, 7, 5]</td><td><p class="fragment">[1, 0, 4, 2, 15, 8, 3]</p></td><td> [1, 0, 4, 15, 3, 2]</td></tr> -->
-				    <tr><td>Atrr</td><td>6</td><td>6</td><td><p class=fragment><span class="fragment highlight-blue">7</span></p></td><td>8</td></tr>				
-				    <tr><td>Time</td><td>10.7 sec</td><td>70.2 sec</td><td><p class="fragment"><span class="fragment highlight-blue">73.2 sec</span></p></td><td>163.4 sec</td></tr>
-				    <tr><td></td></tr>
+				    
+				    <span class=fragment><tr><td>Time</td><td>10.7 sec</td><td>19.7  sec</td><td>70.2 sec</td><td><p >73.2 sec</p></td><td>163.4 sec</td></tr></span>
+				  
 				</table>
 				</center>
 				</section>
@@ -222,6 +220,7 @@ for (Rule it : rules) {
 				 <p class=fragment> Niestety tak...</p>
 				 
 				 <p class=fragment> Bugi w RSESlibie...</p>
+				 <p class=fragment> Brak porządnego algorytmu do generowania reguł </p>
 				 
 				 </section>
 				 <section>
@@ -229,9 +228,9 @@ for (Rule it : rules) {
 				 
 				 <p class="fragment highlight-red"> java.lang.ArrayIndexOutOfBoundsException</p>
 				 
-				 <small><span class=fragment> Wyjątek, który rzuca metoda add, spowodowana następującą rzeczą</small>
+				 <small><span class=fragment> Wyjątek, który rzuca metoda "add", spowodowana następującą rzeczą</small>
 				 
-				 <pre><center><code data-trim contenteditable>
+				<span class=fragment> <pre><center><code data-trim contenteditable>
 					private static ArrayList &lt;String&gt s_StringValueList 
 					</code></center></pre>
 				 </span>
@@ -244,11 +243,7 @@ for (Rule it : rules) {
 				 
 				 
 				 <section>
-				 Jakie jeszcze problemy?
-				 
-				 <p class=fragment> Brakuje porządnego algorytmu generowania reguł </p>
-				 
-				 <p class=fragment> Pomimo ustawionego ziarna, reguły potrafią <br>
+				 <p > Pomimo ustawionego ziarna, reguły potrafią <br>
 					nieznacznie różnić się od siebie </p>
 				 </section>
 				 
@@ -257,17 +252,19 @@ for (Rule it : rules) {
 				 
 				 <p class=fragment> Wahanie accuracy...</p>
 				 
-				 <p class=fragment> W granicach 0.2% </p>
+				 <p class=fragment>...w granicach 0.2% </p>
 				
 				</section>
 				
 				
 				<section>
-				 Co dalej?
-				 <p class=fragment>Znaleźć metodę cięcia atrybutów </p>
-				 <p class=fragment>Poszukać jeszcze innego klasyfikatora regułowego</p>
-				 <p class=fragment>Uruchomić obliczenia na Sparku <br>
+				 Dalszy plan pracy
+				 <p class=fragment>1) Znaleźć metodę cięcia atrybutów </p>
+				 <p class=fragment>2) Poszukać jeszcze innego klasyfikatora regułowego</p>
+				 <p class=fragment>3) Uruchomić obliczenia na Sparku <br>
 									i danych mikromacierzowych</p>
+
+				<p class=fragment>4) Wprowadzenie metody reduktowej</p>
 				</section>
 
 
