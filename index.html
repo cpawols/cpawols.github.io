@@ -256,7 +256,7 @@ for (Rule it : rules) {
 				
 				</section>
 				
-				
+			<section>	    
 				<section>
 				 Dalszy plan pracy
 				 <p class=fragment>1) Znaleźć metodę cięcia atrybutów </p>
@@ -266,7 +266,65 @@ for (Rule it : rules) {
 
 				<p class=fragment>4) Wprowadzenie metody reduktowej</p>
 				</section>
-
+				
+				<section>
+				 Metoda redukotwa
+				  
+				  <p class=fragment>Na wybranych podtabelkach nie generujemy reguł </p>
+				  
+				  <p class=fragment>Jak w takim razie będziemy liczyć score atrybutu? </p>
+				  
+				</section>
+				
+				
+				<section>
+				Jak odróżnić obiekt \(X_1\) od \(X_j\) ze względu na decyzję?
+				<br></br>
+				  <span class=fragment><table>
+				    <tr> <td>Obiekt</td><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td><td>dec</td></tr>
+				    <tr> <td>\(X_1\)</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>+</td></tr>
+				    <tr> <td>\(X_i\)</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>
+				    <tr> <td>\(X_j\)</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>-</td></tr>
+				  </table></span>
+				
+				<p class=fragment> Musimy zachować któryś z atrybutów \(a\) lub \(d\) </p>
+				</section>
+				
+				<section>
+				Pseudokod
+				<pre><code data-trim contenteditable hight=10000>
+for (Object first : objects) {
+    for(Object second : objects) {
+      if(firstObject != secondObject) {
+	diffTable.add(first.diffAttributes(second));
+      }
+    }
+}
+					</code></pre>
+			
+				</section>
+				
+				<section>
+				Otzymamy następującą tabelkę
+				<span class=fragment>
+			 <table>
+			 <tr><td></td><td>\(X_j\)</td><td>...</td></tr>
+			 <tr><td>\(X_1\)</td><td>\(a\) \(b\)</td><td>...</td></tr>
+			 <tr><td>...</td><td>...</td><td>...</td></tr>
+			 </table>
+			</span>
+			
+			<p class=fragment> Scorem atrybutu będzię liczba wystąpień danego atrybutu we wszystkich podtabelkach
+				</section>
+			</section>
+			
+		
+			
+			<section>
+			  
+			<font size=25>  Dziękuję za uwagę </font>
+			
+			</section>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
